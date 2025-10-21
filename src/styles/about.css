@@ -1,0 +1,27 @@
+.about_section_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_content_container {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  width: 80%;
+  margin-top: 6rem;
+}
+
+.image {
+  max-width: 40rem;
+}
+
+.info {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
