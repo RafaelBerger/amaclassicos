@@ -19,7 +19,9 @@ const Navbar = () => {
           Sobre
         </a>
         <a href="#">Catálogo</a>
-        <a href="#">Contato</a>
+        <a href="#contato" onClick={toggleMenu}>
+          Contato
+        </a>
       </div>
 
       <div className="menu_icon" onClick={toggleMenu}>
