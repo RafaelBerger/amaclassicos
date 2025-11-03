@@ -1,0 +1,52 @@
+.header_container {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("./assets/amaclassicosimagem.jpeg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.header_slogan {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.slogan_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    margin-top: 2rem;
+    height: 50vh;
+    background-size: 230%;
+    background-repeat: no-repeat;
+  }
+
+  .header_slogan {
+    width: 100vw;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan_content {
+    width: 90%;
+    text-align: justify;
+  }
+}

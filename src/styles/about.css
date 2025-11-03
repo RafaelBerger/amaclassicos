@@ -14,6 +14,10 @@
   margin-top: 6rem;
 }
 
+.about_content_container.reverse_desktop {
+  flex-direction: row-reverse;
+}
+
 .image {
   max-width: 40rem;
 }
@@ -24,4 +28,33 @@
   flex-direction: column;
   align-items: center;
   text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about_content_container {
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .about_section_container > .about_content_container:first-of-type {
+    flex-direction: column-reverse;
+  }
+
+  .about_content_container.reverse_desktop {
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .info {
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
 }

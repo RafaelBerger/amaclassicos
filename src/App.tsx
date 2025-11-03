@@ -9,8 +9,19 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className="about_section_container">
+      <header className="header_container"></header>
+      <div className="header_slogan">
+        <div className="slogan_content">
+          <p>
+            Na ama Clássicos, cada carro carrega história, esclusividade e
+            emoção
+          </p>
+          <p>São mais de 200 veículos restaurados, originais e únicos</p>
+        </div>
+      </div>
+      <section className="about_section_container" id="sobre">
         <h2>Sobre nós</h2>
+
         <div className="about_content_container">
           <img src={carro1} alt="" className="image" />
           <div className="info">
@@ -41,7 +52,8 @@ function App() {
           </div>
         </div>
 
-        <div className="about_content_container">
+        <div className="about_content_container reverse_desktop">
+          <img src={carro2} alt="" className="image" />
           <div className="info">
             <h3>Antigomobilismo</h3>
             <p>
@@ -71,7 +83,6 @@ function App() {
               estejam à venda, de acordo com o interesse do cliente.
             </p>
           </div>
-          <img src={carro2} alt="" className="image" />
         </div>
       </section>
     </>
