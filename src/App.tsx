@@ -3,9 +3,12 @@ import "./styles/about.css";
 import carro1 from "./assets/carro-1.svg";
 import carro2 from "./assets/carro-2.svg";
 
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <>
+      <Navbar />
       <section className="about_section_container">
         <h2>Sobre nós</h2>
         <div className="about_content_container">

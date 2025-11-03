@@ -1,0 +1,22 @@
+.navbar_container {
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #962925;
+  color: white;
+}
+
+.link_container {
+  display: flex;
+  gap: 4.5rem;
+  padding-right: 15%;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
