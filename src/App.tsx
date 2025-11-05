@@ -5,6 +5,7 @@ import carro2 from "./assets/carro-2.svg";
 
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -88,6 +89,7 @@ function App() {
       </section>
 
       <Contact />
+      <Footer />
     </>
   );
 }
