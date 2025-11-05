@@ -1,17 +1,30 @@
-import "./App.css";
-import "./styles/about.css";
-import carro1 from "./assets/carro-1.svg";
-import carro2 from "./assets/carro-2.svg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import "../App.css";
+import "../styles/about.css";
+import carro1 from "../assets/carro-1.svg";
+import carro2 from "../assets/carro-2.svg";
+
+import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      document
+        .getElementById(location.hash.substring(1))
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />
-      <header className="header_container"></header>
+      <header className="header_container" id="hero"></header>
       <div className="header_slogan">
         <div className="slogan_content">
           <p>
