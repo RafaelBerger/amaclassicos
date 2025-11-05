@@ -1,27 +1,43 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import "../styles/navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  function createHomeAnchorLink(hash: string) {
+    return `/${hash}`;
+  }
+
+  function createContactLink() {
+    const currentPath = location.pathname;
+
+    if (currentPath === "/") {
+      return "/#contato";
+    }
+
+    return `${currentPath}#contato`;
+  }
+
   return (
     <nav className="navbar_container">
       <div className={`link_container ${isOpen ? "open" : ""}`}>
-        <a href="#" onClick={toggleMenu}>
+        <Link to={createHomeAnchorLink("#hero")} onClick={toggleMenu}>
           Inicio
-        </a>
-        <a href="#sobre" onClick={toggleMenu}>
+        </Link>
+        <Link to="/#sobre" onClick={toggleMenu}>
           Sobre
-        </a>
-        <a href="#">Catálogo</a>
-        <a href="#contato" onClick={toggleMenu}>
+        </Link>
+        <Link to="/catalogo#catalogo">Catálogo</Link>
+        <Link to={createContactLink()} onClick={toggleMenu}>
           Contato
-        </a>
+        </Link>
       </div>
 
       <div className="menu_icon" onClick={toggleMenu}>

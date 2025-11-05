@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/footer.css";
 import {
   FacebookLogoIcon,
@@ -22,9 +23,9 @@ function Footer() {
               <h4>Atalhos</h4>
             </div>
             <div className="footer_links">
-              <a href="">Inicio</a>
-              <a href="">Sobre</a>
-              <a href="">Catálogo</a>
+              <Link to="/#hero">Inicio</Link>
+              <Link to="/#sobre">Sobre</Link>
+              <Link to="/catalogo#catalogo">Catálogo</Link>
             </div>
           </div>
 
@@ -42,13 +43,13 @@ function Footer() {
             <h4>Redes Sociais</h4>
 
             <div className="socialmedia_icons">
-              <a href="">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 <FacebookLogoIcon size={45} weight="fill" />
               </a>
-              <a href="">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 <InstagramLogoIcon size={45} weight="fill" />
               </a>
-              <a href="">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 <LinkedinLogoIcon size={45} weight="fill" />
               </a>
             </div>
