@@ -20,3 +20,9 @@ body {
   padding: 0;
   scroll-behavior: smooth;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
