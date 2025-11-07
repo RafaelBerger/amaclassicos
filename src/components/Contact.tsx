@@ -16,9 +16,9 @@ function Contact() {
         <Card
           Icon={WhatsappLogoIcon}
           comunicationMethod="WhatsApp"
-          comunicationInfo="(14) 98158-3077"
+          comunicationInfo="(19) 98205-8008"
           buttonText="Mandar mensagem"
-          href="https://wa.me/5514981583077"
+          href="https://wa.me/5519982058008"
         />
         <Card
           Icon={EnvelopeIcon}

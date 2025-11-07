@@ -18,6 +18,8 @@ function Catalogo() {
     }
   }, [location]);
 
+  //TODO: CONSERTAR ROLAMENTO VERTICAL DA PAGINA, VERIFICAR SE TEM ALGO INDO MUITO PARA A DIREITA SE NAO SO OVERFLOW
+
   return (
     <>
       <Navbar />
