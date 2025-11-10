@@ -8,7 +8,6 @@ import "../Catalogo.css";
 
 function Catalogo() {
   const location = useLocation();
-  console.log(location.hash.substring(1));
 
   useEffect(() => {
     if (location.hash) {
@@ -17,8 +16,6 @@ function Catalogo() {
         ?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
-
-  //TODO: CONSERTAR ROLAMENTO VERTICAL DA PAGINA, VERIFICAR SE TEM ALGO INDO MUITO PARA A DIREITA SE NAO SO OVERFLOW
 
   return (
     <>
