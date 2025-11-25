@@ -1,6 +1,100 @@
-.teste {
-  height: 100vh;
+.catalog_section_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog_section_container > h1 {
+  margin-top: 8rem;
+  font-size: 1.875rem;
+}
+
+.catalog_section_container > h3 {
+  width: 50%;
+  text-align: center;
+}
+
+.catalog_content_container {
+  width: 75%;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.catalog_card_container {
+  width: 26.25rem;
+  height: 15.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: white;
+  box-shadow: 0px 4px 12px rgba(2, 2, 2, 0.2);
+  border-radius: 10px;
+}
+
+.card_image_half {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_image {
+  width: 13.75rem;
+}
+
+.card_content_half {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card_content_half > h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.card_content_half p {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+.card_content_half > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content_card_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #962925;
+
+  font-size: 1rem;
+  width: 9rem;
+  height: 2.8rem;
+
+  transition: ease-in 0.1s;
+}
+
+.content_card_button:hover {
+  background-color: rgb(173, 50, 46);
 }
