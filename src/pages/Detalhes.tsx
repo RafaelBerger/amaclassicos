@@ -1,18 +1,23 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import 'swiper/css'
 import "../Detalhes.css";
 
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Carrosel from "../components/Carrosel";
 
-import teste from "../assets/imagetest.png";
+// import teste from "../assets/imagetest.png";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function Detalhes() {
   const location = useLocation();
+
+  const images = [
+    "https://avatars.githubusercontent.com/u/84355579?v=4",
+    "https://avatars.githubusercontent.com/u/68913110?v=4",
+    "https://avatars.githubusercontent.com/u/59837027?v=4",
+  ];
 
   useEffect(() => {
     if (location.hash) {
@@ -28,7 +33,7 @@ function Detalhes() {
 
       <main className="details_section">
         <div>
-          <img src={teste} alt="" className="details_image" />
+          <Carrosel images={images} />
         </div>
 
         <div className="details_content_container">
