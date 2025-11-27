@@ -104,3 +104,38 @@
   align-items: center;
   width: 100%;
 }
+
+/* ===================================================== CSS DO CARROSEL */
+
+.carrosel_wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carrosel_img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* deixar as setas brancas */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+/* opcional: aumentar o tamanho */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-weight: 900 !important; /* deixa a seta mais grossa */
+  font-size: 28px !important; /* opcional */
+  color: white !important;
+}
+
+/* opcional: sombra para destacar no fundo claro */
+.swiper-button-next,
+.swiper-button-prev {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+}

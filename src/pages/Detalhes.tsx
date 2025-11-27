@@ -1,11 +1,14 @@
 import "../Detalhes.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Carrosel from "../components/Carrosel";
-
-// import teste from "../assets/imagetest.png";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -33,7 +36,24 @@ function Detalhes() {
 
       <main className="details_section">
         <div>
-          <Carrosel images={images} />
+          <div className="carrosel_wrapper">
+            <Swiper
+              modules={[Pagination, Navigation]}
+              pagination={{ clickable: true }}
+              navigation={true}
+              spaceBetween={10}
+              slidesPerView={1}
+              style={{ width: "100%", height: "100%" }}
+            >
+              {images.map((url, i) => (
+                <SwiperSlide key={i}>
+                  <img className="carrosel_img" src={url} alt={`slide-${i}`} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* <img src={images[0]} alt="" /> */}
         </div>
 
         <div className="details_content_container">

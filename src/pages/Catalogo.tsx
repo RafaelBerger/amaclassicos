@@ -46,6 +46,60 @@ function Catalogo() {
               </div>
             </div>
           </div>
+          <div className="catalog_card_container">
+            <div className="card_image_half">
+              <img src={teste} alt="" className="card_image" />
+            </div>
+            <div className="card_content_half">
+              <h4>Toyota Yaris</h4>
+              <div>
+                <p>2019</p>
+                <p>R$ 200,000,00</p>
+                <p>40.000 KM</p>
+              </div>
+              <div className="button_container">
+                <Link to="/detalhes" className="content_card_button">
+                  Ver detalhes
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="catalog_card_container">
+            <div className="card_image_half">
+              <img src={teste} alt="" className="card_image" />
+            </div>
+            <div className="card_content_half">
+              <h4>Toyota Yaris</h4>
+              <div>
+                <p>2019</p>
+                <p>R$ 200,000,00</p>
+                <p>40.000 KM</p>
+              </div>
+              <div className="button_container">
+                <Link to="/detalhes" className="content_card_button">
+                  Ver detalhes
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="catalog_card_container">
+            <div className="card_image_half">
+              <img src={teste} alt="" className="card_image" />
+            </div>
+            <div className="card_content_half">
+              <h4>Toyota Yaris</h4>
+              <div>
+                <p>2019</p>
+                <p>R$ 200,000,00</p>
+                <p>40.000 KM</p>
+              </div>
+              <div className="button_container">
+                <Link to="/detalhes" className="content_card_button">
+                  Ver detalhes
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <Contact />
