@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./pages/App.tsx";
 import Catalogo from "./pages/Catalogo.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Detalhes from "./pages/Detalhes.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
   {
     path: "catalogo",
     element: <Catalogo />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "detalhes",
+    element: <Detalhes />,
     errorElement: <NotFound />,
   },
   {

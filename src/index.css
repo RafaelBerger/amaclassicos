@@ -3,9 +3,8 @@
 :root {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
 
-  background-color: #f6f6f6;
+  background-color: #ecedf2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,

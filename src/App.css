@@ -1,6 +1,6 @@
 .header_container {
   width: 100vw;
-  height: 60vh;
+  height: 85vh;
   overflow: hidden;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
@@ -39,6 +39,7 @@
   .header_slogan {
     width: 100vw;
     padding: 4rem 0;
+    margin: 3rem 0 3rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

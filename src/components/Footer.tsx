@@ -4,6 +4,7 @@ import {
   FacebookLogoIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
+  TiktokLogoIcon,
 } from "@phosphor-icons/react";
 
 function Footer() {
@@ -34,7 +35,7 @@ function Footer() {
               <h4>Meios de contato</h4>
             </div>
             <div className="footer_contact_content">
-              <p>(11) 98205-8008</p>
+              <p>(19) 98205-8008</p>
               <p>contato@amaclassicos.com.br</p>
             </div>
           </div>
@@ -46,11 +47,22 @@ function Footer() {
               <a href="" target="_blank" rel="noopener noreferrer">
                 <FacebookLogoIcon size={45} weight="fill" />
               </a>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/amac.lassicos?igsh=MTA0cW90M2VmbjE3ZQ%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <InstagramLogoIcon size={45} weight="fill" />
               </a>
               <a href="" target="_blank" rel="noopener noreferrer">
                 <LinkedinLogoIcon size={45} weight="fill" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@amaclassicos?_r=1&_t=ZS-91HZ7WHM6op"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TiktokLogoIcon size={45} weight="fill" />
               </a>
             </div>
           </div>
