@@ -20,9 +20,12 @@
 
 .details_content_container {
   margin-top: 6rem;
-  width: 50%;
+  padding: 2rem 4rem;
+  width: 60%;
+  max-width: 1150px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 
   background: white;
   box-shadow: 0px 4px 12px rgba(2, 2, 2, 0.2);
@@ -37,39 +40,27 @@
   align-items: center;
 }
 
-.main_details > h3 {
-  margin: 0;
-  font-size: 1.75rem;
-}
-
 .main_details > p {
   margin: 0;
   font-size: 1.5rem;
 }
 
 .further_details {
-  margin-top: 4rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-
-  row-gap: 3rem;
+  justify-content: center;
 }
 
 .details_content_block {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 50%;
+  width: 100%;
 }
 
-.details_content_block > h4 {
-  color: gray;
-  font-size: 1.375rem;
-  margin: 0;
-}
 .details_content_block > p {
   font-size: 1.125rem;
 }
@@ -97,8 +88,7 @@
 }
 
 .button_div {
-  margin-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,6 +96,11 @@
 }
 
 /* ===================================================== CSS DO CARROSEL */
+
+.swiper_container {
+  max-width: 500px;
+  object-fit: cover;
+}
 
 .carrosel_wrapper {
   width: 100%;
@@ -115,7 +110,7 @@
 
 .carrosel_img {
   width: 100%;
-  height: auto;
+  max-height: 400px;
   object-fit: contain;
   border-radius: 10px;
 }
@@ -124,13 +119,15 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
+  stroke-width: 0.5px;
+  stroke: black !important;
 }
 
 /* opcional: aumentar o tamanho */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-weight: 900 !important; /* deixa a seta mais grossa */
   font-size: 28px !important; /* opcional */
+  font-weight: 900 !important; /* deixa a seta mais grossa */
   color: white !important;
 }
 
