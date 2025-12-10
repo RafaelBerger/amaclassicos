@@ -40,6 +40,7 @@ function Detalhes() {
   // ];
 
   const images = [
+    numero16,
     numero1,
     numero2,
     numero3,
@@ -55,7 +56,6 @@ function Detalhes() {
     numero13,
     numero14,
     numero15,
-    numero16,
   ];
 
   useEffect(() => {
@@ -127,6 +127,17 @@ function Detalhes() {
                 <p>
                   <b>Preço:</b> R$ 200,000,000
                 </p>
+              </div>
+              <div className="details_content_block">
+                <div className="button_div">
+                  <a
+                    href="https://wa.me/5519982058008"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Enviar mensagem
+                  </a>
+                </div>
               </div>
             </div>
           </div>
