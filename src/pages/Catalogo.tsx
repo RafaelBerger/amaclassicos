@@ -37,7 +37,7 @@ function Catalogo() {
         <h3>Temos veiculos disponiveis ainda não restaurados</h3>
 
         <div className="catalog_content_container">
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={mercury} alt="" className="card_image" />
@@ -51,7 +51,7 @@ function Catalogo() {
               </div>
             </div>
           </Link>
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={martaRocha} alt="" className="card_image" />
@@ -66,7 +66,7 @@ function Catalogo() {
             </div>
           </Link>
 
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={fordBolha} alt="" className="card_image" />
@@ -82,7 +82,7 @@ function Catalogo() {
               </div>
             </div>
           </Link>
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={mustang} alt="" className="card_image" />
@@ -97,7 +97,7 @@ function Catalogo() {
             </div>
           </Link>
 
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={jeepAco} alt="" className="card_image" />
@@ -111,7 +111,7 @@ function Catalogo() {
               </div>
             </div>
           </Link>
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={f1000} alt="" className="card_image" />
@@ -125,7 +125,7 @@ function Catalogo() {
               </div>
             </div>
           </Link>
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={ford28} alt="" className="card_image" />
@@ -139,7 +139,7 @@ function Catalogo() {
               </div>
             </div>
           </Link>
-          <Link to="/detalhes">
+          <Link to="/detalhes" className="ancora">
             <div className="catalog_card_container">
               <div className="card_image_half">
                 <img src={importadoMercedes} alt="" className="card_image" />
