@@ -10,10 +10,13 @@ type Car = {
   motor: string
   documentacao: string
   preco: number
+  slugDoCarro: string
   fotos: {
     url: string
   }[]
 }
+
+
 
 type Infos = {
   aviso: string | null

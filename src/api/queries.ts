@@ -9,6 +9,7 @@ export async function getCars(){
     ano
     motor
     documentacao
+    slugDoCarro
     preco
      fotos{
       url
@@ -20,6 +21,29 @@ export async function getCars(){
 const data = await hygraphClient.request(query);
 return data.carros
 }
+
+export async function getCarBySlug(slug: string) {
+  const query = `
+    query ($slug: String!) {
+      carro(where: { slugDoCarro: $slug }) {
+        id
+        nomeDoCarro
+        ano
+        motor
+        documentacao
+        preco
+        slugDoCarro
+        fotos {
+          url
+        }
+      }
+    }
+  `;
+
+  const data = await hygraphClient.request(query, { slug });
+  return data.carro;
+}
+
 
 
 

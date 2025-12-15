@@ -25,8 +25,7 @@ function Catalogo() {
     getInfos().then(setInfos);
   }, [location]);
 
-  console.log(infos);
-  // CONTINUAR A INTEGRAR A API, FALTA COLOCAR O CEL E EMAIL DINAMICO E FAZER A QUERY E LOGICA DO SLUG
+  console.log(cars);
   return (
     <>
       <Navbar />
@@ -37,7 +36,11 @@ function Catalogo() {
 
         <div className="catalog_content_container">
           {cars.map((car) => (
-            <Link key={car.id} to="/detalhes" className="ancora">
+            <Link
+              key={car.id}
+              to={`/detalhes/${car?.slugDoCarro}`}
+              className="ancora"
+            >
               <div className="catalog_card_container">
                 <div className="card_image_half">
                   <img src={car.fotos[0].url} alt="" className="card_image" />
