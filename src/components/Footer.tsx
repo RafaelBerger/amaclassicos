@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { getInfos } from "../api/queries";
+import { formatPhoneBR } from "../utils/formatPhone";
 import "../styles/footer.css";
 import {
   FacebookLogoIcon,
@@ -6,9 +8,15 @@ import {
   LinkedinLogoIcon,
   TiktokLogoIcon,
 } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 
 function Footer() {
   const year = new Date().getFullYear();
+  const [infos, setInfos] = useState<Infos | null>(null);
+
+  useEffect(() => {
+    getInfos().then(setInfos);
+  }, []);
 
   return (
     <>
@@ -35,8 +43,8 @@ function Footer() {
               <h4>Meios de contato</h4>
             </div>
             <div className="footer_contact_content">
-              <p>(19) 98205-8008</p>
-              <p>contato@amaclassicos.com.br</p>
+              <p>{formatPhoneBR(infos?.numeroDoWhatsapp)}</p>
+              <p>{infos?.emailDeContato}</p>
             </div>
           </div>
 

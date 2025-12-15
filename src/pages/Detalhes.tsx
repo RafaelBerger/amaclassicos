@@ -1,4 +1,8 @@
 import "../Detalhes.css";
+import { useLocation, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getCarBySlug, getInfos } from "../api/queries";
+import { formatPriceBR } from "../utils/formatPrice";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,17 +14,12 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
 function Detalhes() {
   const location = useLocation();
+  const { slug } = useParams<{ slug: string }>();
 
-  const images = [
-    "https://us-west-2.graphassets.com/cmiz6nnmu04j707nafnnk16df/cmj0it7ur3wk907lp6ou6kebo",
-    "https://us-west-2.graphassets.com/cmiz6nnmu04j707nafnnk16df/cmj0it7rv3jj107n3lw34hrfb",
-    "https://us-west-2.graphassets.com/cmiz6nnmu04j707nafnnk16df/cmj0it7io3jin07n3gv8al39v",
-  ];
+  const [carBySlug, setCarBySlug] = useState<Car | null>(null);
+  const [infos, setInfos] = useState<Infos | null>(null);
 
   useEffect(() => {
     if (location.hash) {
@@ -28,7 +27,17 @@ function Detalhes() {
         .getElementById(location.hash.substring(1))
         ?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [location]);
+
+    if (slug) {
+      getCarBySlug(slug).then(setCarBySlug);
+    }
+
+    getInfos().then(setInfos);
+  }, [location, slug]);
+
+  if (!carBySlug) {
+    return <p>Carregando...</p>;
+  }
 
   return (
     <>
@@ -39,7 +48,7 @@ function Detalhes() {
           {/* CARROSSEL + BOTAO ESQUERDA */}
           <div className="left_block">
             <a
-              href="https://wa.me/5519982058008"
+              href={`https://wa.me/${infos?.numeroDoWhatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn_saiba"
@@ -56,11 +65,11 @@ function Detalhes() {
                 slidesPerView={1}
                 className="swiper_container"
               >
-                {images.map((url, i) => (
+                {carBySlug?.fotos.map((url, i) => (
                   <SwiperSlide key={i}>
                     <img
                       className="carrosel_img"
-                      src={url}
+                      src={url.url}
                       alt={`slide-${i}`}
                     />
                   </SwiperSlide>
@@ -68,17 +77,21 @@ function Detalhes() {
               </Swiper>
             </div>
 
-            <button className="btn_preco">R$: 200,000</button>
+            <div className="btn_preco">
+              R$: {formatPriceBR(carBySlug?.preco)}
+            </div>
           </div>
 
           {/* LISTA DE INFORMACOES */}
           <div className="right_block">
             <div className="info_box">
-              Marca/Modelo: Toyota Corolla asdasdasdassadasdsadsadsadasdasdasda{" "}
+              Marca/Modelo: {carBySlug?.nomeDoCarro}
             </div>
-            <div className="info_box">Ano: 2020</div>
-            <div className="info_box">Motor: 6cc</div>
-            <div className="info_box">Documentação: completa</div>
+            <div className="info_box">Ano: {carBySlug?.ano}</div>
+            <div className="info_box">Motor: {carBySlug?.motor}</div>
+            <div className="info_box">
+              Documentação: {carBySlug?.documentacao}
+            </div>
           </div>
         </div>
       </main>

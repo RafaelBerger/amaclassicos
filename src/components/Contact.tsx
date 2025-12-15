@@ -1,8 +1,17 @@
+import { getInfos } from "../api/queries";
 import "../styles/contact.css";
+import { formatPhoneBR } from "../utils/formatPhone";
 import Card from "./Card";
 import { WhatsappLogoIcon, EnvelopeIcon } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 
 function Contact() {
+  const [infos, setInfos] = useState<Infos | null>(null);
+
+  useEffect(() => {
+    getInfos().then(setInfos);
+  }, []);
+
   return (
     <div className="contact_container" id="contato">
       <div className="contact_text">
@@ -16,16 +25,16 @@ function Contact() {
         <Card
           Icon={WhatsappLogoIcon}
           comunicationMethod="WhatsApp"
-          comunicationInfo="(19) 98205-8008"
+          comunicationInfo={formatPhoneBR(infos?.numeroDoWhatsapp)}
           buttonText="Mandar mensagem"
-          href="https://wa.me/5519982058008"
+          href={`https://wa.me/${infos?.numeroDoWhatsapp}`}
         />
         <Card
           Icon={EnvelopeIcon}
           comunicationMethod="Email"
-          comunicationInfo="contato@amaclassicos.com.br"
+          comunicationInfo={infos?.emailDeContato}
           buttonText="Mandar email"
-          href="mailto:contato@amaclassicos.com.br"
+          href={`mailto:${infos?.emailDeContato}`}
         />
       </div>
     </div>
