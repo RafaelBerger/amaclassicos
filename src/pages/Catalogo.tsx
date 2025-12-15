@@ -26,7 +26,7 @@ function Catalogo() {
   }, [location]);
 
   console.log(infos);
-
+  // CONTINUAR A INTEGRAR A API, FALTA COLOCAR O CEL E EMAIL DINAMICO E FAZER A QUERY E LOGICA DO SLUG
   return (
     <>
       <Navbar />

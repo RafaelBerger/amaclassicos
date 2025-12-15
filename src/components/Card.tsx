@@ -4,7 +4,7 @@ import type { IconProps } from "@phosphor-icons/react";
 interface CardProps {
   Icon: React.FC<IconProps>;
   comunicationMethod: string;
-  comunicationInfo: string;
+  comunicationInfo: string | undefined;
   buttonText: string;
   href: string;
 }
