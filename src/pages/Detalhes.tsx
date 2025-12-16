@@ -36,7 +36,12 @@ function Detalhes() {
   }, [location, slug]);
 
   if (!carBySlug) {
-    return <p>Carregando...</p>;
+    return (
+      <div className="loading_container">
+        <div className="spinner" />
+        <p>Carregando veículo...</p>
+      </div>
+    );
   }
 
   return (

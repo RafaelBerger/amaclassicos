@@ -25,7 +25,15 @@ function Catalogo() {
     getInfos().then(setInfos);
   }, [location]);
 
-  console.log(cars);
+  if (!cars) {
+    return (
+      <div className="loading_container">
+        <div className="spinner" />
+        <p>Carregando veículo...</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <Navbar />
