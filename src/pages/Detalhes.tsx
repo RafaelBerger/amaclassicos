@@ -103,15 +103,3 @@ function Detalhes() {
 }
 
 export default Detalhes;
-
-{
-  /* <div className="button_div">
-  <a
-    href="https://wa.me/5519982058008"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Enviar mensagem
-  </a>
-</div>; */
-}
