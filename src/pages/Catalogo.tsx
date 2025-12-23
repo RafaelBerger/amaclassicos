@@ -25,7 +25,6 @@ function Catalogo() {
     getInfos().then(setInfos);
   }, [location]);
 
-  console.log(cars);
   return (
     <>
       <Navbar />

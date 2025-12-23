@@ -148,6 +148,20 @@
     position: relative;
   }
 
+  .right_block {
+    width: 100vw;
+    align-items: center;
+  }
+
+  .detalhes_container {
+    width: 90%;
+  }
+
+  .info_box {
+    width: 100%;
+    font-size: 18px;
+  }
+
   .carrosel_wrapper {
     width: 90%;
     border-width: 10px; /* borda menor */
